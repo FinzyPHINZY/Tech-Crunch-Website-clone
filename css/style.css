@@ -1,0 +1,135 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav,aside,main {
+  float: left;
+  margin: 0 3px;
+}
+
+nav {
+  max-width: 12%;
+}
+
+nav > a {
+  display: block;
+}
+
+nav > ul {
+  font-size: 1.2em;
+}
+
+aside {
+  max-width: 30%;
+}
+
+main {
+  max-width: 55%;
+}
+
+main img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+ul {
+  list-style-type: none;
+  
+}
+
+article {
+  margin-top: 100px;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 819px) {
+  aside,
+  nav {
+    display: none;
+  }
+
+  main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 820px) and (max-width:1200px) {
+  * {
+    margin: 0 20px;
+  }
+  
+  nav {
+    display: none;
+  }
+
+  main {
+    max-width: 60%;
+  }
+
+  aside {
+    max-width: 35%;
+  }
+
+  article div * {
+    float: left;
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1201px) {
+  article div * {
+    float: left;
+    width: 45%;
+    margin: 10px;
+  }
+
+  nav {
+    max-width: 20%;
+  }
+
+  main {
+    max-width: 50%;
+  }
+
+  aside {
+    max-width: 30%;
+  }
+}
